@@ -1,6 +1,5 @@
 #include <iostream>
 
-
 int main() {
     int a, b, c;
     
@@ -11,11 +10,11 @@ int main() {
     std::cout << "Введите третье число: ";
     std::cin >> c;
     
-    int max = (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
+    int max = (a >= b) ? ((a >= c) ? a : c) : ((b >= c) ? b : c);
     
-    int min = (a < b) ? ((a < c) ? a : c) : ((b < c) ? b : c);
+    int min = (a <= b) ? ((a <= c) ? a : c) : ((b <= c) ? b : c);
     
-    int mid = (a != max && a != min) ? a : ((b != max && b != min) ? b : c);
+    int mid = a + b + c - max - min;
     
     std::cout << "Результат: " << max << " " << mid << " " << min << std::endl;
     
